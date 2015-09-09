@@ -4,16 +4,7 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Logical" value="seamm" />
-   <property key="Connection Type" value="PostgreSQL" />
-   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/seamm" />
-   <property key="UID" value="kryptykfysh" />
-   <property key="PWD" value="entropy.0" />
-   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
-   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
-   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
-   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
-   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+   <property key="Logical" value="PlayPen Database" />
   </data-source>
  </project-data-sources>
  <source-databases>
@@ -23,16 +14,16 @@
    <remarks></remarks>
    <folder id="FOLTAB11" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL2" populated="true" UUID="99cc0291-007f-45be-bb59-b509aae83401" autoIncrement="true" autoIncrementSequenceName="people_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Auto Incrementing Primary Key for people</remarks>
     </column>
     <column id="COL3" populated="true" UUID="f4540f57-74cc-473a-9bf2-b48296c6e997" autoIncrement="false" autoIncrementSequenceName="people_first_name_seq" defaultValue="" name="first_name" nullable="0" physicalName="first_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Required first_name for person</remarks>
     </column>
-    <column id="COL4" populated="true" UUID="6ec81fd2-99ff-4628-9ebf-94fe97c93243" autoIncrement="false" autoIncrementSequenceName="people_last_name_seq" defaultValue="" name="last_name" nullable="0" physicalName="last_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+    <column id="COL4" populated="true" UUID="6ec81fd2-99ff-4628-9ebf-94fe97c93243" autoIncrement="false" autoIncrementSequenceName="people_last_name_seq" defaultValue="" name="last_name" nullable="1" physicalName="last_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks>Not required last_name for person</remarks>
     </column>
     <column id="COL5" populated="true" UUID="43035cee-4d61-4d54-b783-09154b9344ce" autoIncrement="false" autoIncrementSequenceName="people_date_of_birth_seq" defaultValue="" name="date_of_birth" nullable="0" physicalName="date_of_birth" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
-     <remarks></remarks>
+     <remarks>Required date_of_birth of person</remarks>
     </column>
     </folder>
     <folder id="FOLTAB13" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -41,7 +32,7 @@
     </folder>
     <folder id="FOLTAB14" populated="true" name="Indices" physicalName="Indices" type="4">
     <index id="IDX6" populated="true" UUID="e1473b8f-5818-4f5a-804e-9d01f8ba711c" clustered="false" name="people_pk" physicalName="people_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC7" populated="true" UUID="e9b06cad-afe8-4ef2-8a86-7293d2e31f23" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="id" physicalName="id" />
+     <index-column id="IDC7" populated="true" UUID="d40d25a7-13e1-44e2-9c3e-db6c817f3a7f" ascendingOrDescending="UNSPECIFIED" column-ref="COL2" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
@@ -49,10 +40,10 @@
    <remarks></remarks>
    <folder id="FOLTAB81" populated="true" name="Columns" physicalName="Columns" type="1">
     <column id="COL9" populated="true" UUID="a3ed5cdc-90dc-4b44-94f5-a98c537e7788" autoIncrement="true" autoIncrementSequenceName="genera_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Auto Incrementing Primary Key for genera</remarks>
     </column>
     <column id="COL10" populated="true" UUID="af8dcd04-22c2-48e7-9be2-751b24eb694a" autoIncrement="false" autoIncrementSequenceName="genera_name_seq" defaultValue="" name="name" nullable="0" physicalName="name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Required unique text value for the genus name</remarks>
     </column>
     </folder>
     <folder id="FOLTAB83" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -71,14 +62,14 @@
   <table id="TAB15" populated="true" UUID="5b1440a0-f4ca-4ed3-9f3c-6e845838210d" name="species" objectType="TABLE" physicalName="species" >
    <remarks></remarks>
    <folder id="FOLTAB151" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL16" populated="true" UUID="c4842f23-dcbb-4b9b-b735-c9df69286524" autoIncrement="false" autoIncrementSequenceName="species_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL16" populated="true" UUID="c4842f23-dcbb-4b9b-b735-c9df69286524" autoIncrement="true" autoIncrementSequenceName="species_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Auto Incrementing Primary Key for species</remarks>
     </column>
     <column id="COL17" populated="true" UUID="c900c67b-af42-4660-b601-9f0da20df3da" autoIncrement="false" autoIncrementSequenceName="species_genus_id_seq" defaultValue="" name="genus_id" nullable="0" physicalName="genus_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Required foreign key for genus</remarks>
     </column>
     <column id="COL18" populated="true" UUID="77388bc8-acb3-4749-9858-e09259471e5f" autoIncrement="false" autoIncrementSequenceName="species_name_seq" defaultValue="" name="name" nullable="0" physicalName="name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Required text value for the species name</remarks>
     </column>
     </folder>
     <folder id="FOLTAB153" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -87,7 +78,7 @@
     </folder>
     <folder id="FOLTAB154" populated="true" name="Indices" physicalName="Indices" type="4">
     <index id="IDX19" populated="true" UUID="e1bc3a44-a192-4c5e-8c73-2018a8f3e771" clustered="false" name="species_pk" physicalName="species_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC20" populated="true" UUID="7840e250-b1f5-46cb-ab16-57b8e5aa7dd0" ascendingOrDescending="UNSPECIFIED" column-ref="COL16" name="id" physicalName="id" />
+     <index-column id="IDC20" populated="true" UUID="1c30d11e-2087-4393-8d14-e46024698ffd" ascendingOrDescending="UNSPECIFIED" column-ref="COL16" name="id" physicalName="id" />
     </index>
     <index id="IDX21" populated="true" UUID="c74d391f-3feb-4e83-87f6-edba02e4fa11" clustered="false" name="species_name_idx" physicalName="species_name_idx" primaryKeyIndex="false" unique="false" >
      <index-column id="IDC22" populated="true" UUID="e6f73358-337c-4475-9dbd-3b8bd29659d0" ascendingOrDescending="UNSPECIFIED" column-ref="COL18" name="name" physicalName="name" />
@@ -104,7 +95,7 @@
      <remarks></remarks>
     </column>
     <column id="COL27" populated="true" UUID="929cbefc-2358-4113-9ae4-bd44216b32c8" autoIncrement="false" autoIncrementSequenceName="countries_name_seq" defaultValue="" name="name" nullable="0" physicalName="name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
-     <remarks></remarks>
+     <remarks>Required unique varchar name of the country</remarks>
     </column>
     </folder>
     <folder id="FOLTAB253" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -123,11 +114,11 @@
   <table id="TAB32" populated="true" UUID="5c517c8d-4561-404b-8f9d-b3504b9e03d5" name="marine_areas" objectType="TABLE" physicalName="marine_areas" >
    <remarks></remarks>
    <folder id="FOLTAB321" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL33" populated="true" UUID="617bcbdc-fa55-4903-9916-ccc84751e66c" autoIncrement="false" autoIncrementSequenceName="marine_areas_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL33" populated="true" UUID="617bcbdc-fa55-4903-9916-ccc84751e66c" autoIncrement="true" autoIncrementSequenceName="marine_areas_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Auto Incrementing Primary Key for marine_areas</remarks>
     </column>
     <column id="COL34" populated="true" UUID="caf4a1b9-f792-4e20-8be8-89975104824d" autoIncrement="false" autoIncrementSequenceName="marine_areas_country_id_seq" defaultValue="" name="country_id" nullable="0" physicalName="country_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Required foreign key to countries table</remarks>
     </column>
     </folder>
     <folder id="FOLTAB323" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -146,20 +137,20 @@
   <table id="TAB39" populated="true" UUID="21d1e1ad-477c-4627-b4b5-f93f88f3644e" name="area_inspectors" objectType="TABLE" physicalName="area_inspectors" >
    <remarks></remarks>
    <folder id="FOLTAB391" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL40" populated="true" UUID="ce3a9619-e671-4cdd-8f30-c04ac3d9d448" autoIncrement="false" autoIncrementSequenceName="area_inspectors_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL40" populated="true" UUID="ce3a9619-e671-4cdd-8f30-c04ac3d9d448" autoIncrement="true" autoIncrementSequenceName="area_inspectors_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="4" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Auto Incrementing Primary Key for area_inspectors</remarks>
     </column>
-    <column id="COL41" populated="true" UUID="7015f208-ba15-471f-9b52-a88076eb9326" autoIncrement="false" autoIncrementSequenceName="area_inspectors_person_id_seq" defaultValue="" name="person_id" nullable="0" physicalName="person_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL41" populated="true" UUID="7015f208-ba15-471f-9b52-a88076eb9326" autoIncrement="false" autoIncrementSequenceName="area_inspectors_person_id_seq" defaultValue="" name="person_id" nullable="0" physicalName="person_id" precision="0" referenceCount="0" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key to people table</remarks>
     </column>
     <column id="COL42" populated="true" UUID="8dac2d41-122f-47c6-bd15-a23aa2bdeb87" autoIncrement="false" autoIncrementSequenceName="area_inspectors_marine_area_id_seq" defaultValue="" name="marine_area_id" nullable="0" physicalName="marine_area_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Required foreign key to marine_areas table</remarks>
     </column>
     <column id="COL43" populated="true" UUID="7028c8ef-1469-4dfd-bc4a-fa050c8a1397" autoIncrement="false" autoIncrementSequenceName="area_inspectors_start_at_seq" defaultValue="" name="start_at" nullable="0" physicalName="start_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
-     <remarks></remarks>
+     <remarks>Required start of person in area_inspector position</remarks>
     </column>
-    <column id="COL44" populated="true" UUID="db35d1c6-f48d-468c-8061-b65c42f25306" autoIncrement="false" autoIncrementSequenceName="area_inspectors_end_at_seq" defaultValue="" name="end_at" nullable="0" physicalName="end_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
-     <remarks></remarks>
+    <column id="COL44" populated="true" UUID="db35d1c6-f48d-468c-8061-b65c42f25306" autoIncrement="false" autoIncrementSequenceName="area_inspectors_end_at_seq" defaultValue="" name="end_at" nullable="1" physicalName="end_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Not required timestamp of person&apos;s leaving area_inspector position</remarks>
     </column>
     </folder>
     <folder id="FOLTAB393" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -175,20 +166,20 @@
   <table id="TAB47" populated="true" UUID="b6ddce1c-71fe-4962-9f16-6b814d046582" name="population_surveys" objectType="TABLE" physicalName="population_surveys" >
    <remarks></remarks>
    <folder id="FOLTAB471" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL48" populated="true" UUID="e7fd55de-971f-47a4-83b9-01e043dcffa6" autoIncrement="false" autoIncrementSequenceName="population_surveys_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL48" populated="true" UUID="e7fd55de-971f-47a4-83b9-01e043dcffa6" autoIncrement="false" autoIncrementSequenceName="population_surveys_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="4" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Auto Incrementing Primary Key for population_surveys</remarks>
     </column>
     <column id="COL49" populated="true" UUID="fbc3d0b2-582e-4dee-bcaf-d247249ba151" autoIncrement="false" autoIncrementSequenceName="population_surveys_marine_area_id_seq" defaultValue="" name="marine_area_id" nullable="0" physicalName="marine_area_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Required foreign key for marine_area</remarks>
     </column>
-    <column id="COL50" populated="true" UUID="fc1687e5-7d9b-4e81-bb72-39d9c82340b5" autoIncrement="false" autoIncrementSequenceName="population_surveys_species_id_seq" defaultValue="" name="species_id" nullable="0" physicalName="species_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL50" populated="true" UUID="8445ae10-abf4-47b1-9a4a-26416ae30561" autoIncrement="false" autoIncrementSequenceName="population_surveys_logged_at_seq" defaultValue="" name="logged_at" nullable="0" physicalName="logged_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Required timestamp for when the popoulation survey was entered</remarks>
     </column>
-    <column id="COL51" populated="true" UUID="8445ae10-abf4-47b1-9a4a-26416ae30561" autoIncrement="false" autoIncrementSequenceName="population_surveys_logged_at_seq" defaultValue="" name="logged_at" nullable="0" physicalName="logged_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
-     <remarks></remarks>
+    <column id="COL51" populated="true" UUID="2341e556-e93a-4a24-8657-0bad8073eb1e" autoIncrement="false" autoIncrementSequenceName="population_surveys_species_id_seq" defaultValue="" name="species_id" nullable="0" physicalName="species_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for species</remarks>
     </column>
     <column id="COL52" populated="true" UUID="89f9b98f-0ce9-4528-b81c-15bba679f4e5" autoIncrement="false" autoIncrementSequenceName="population_surveys_population_seq" defaultValue="" name="population" nullable="0" physicalName="population" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+     <remarks>Required population data for specific species in given marine_area at time of survey</remarks>
     </column>
     </folder>
     <folder id="FOLTAB473" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -204,20 +195,20 @@
   <table id="TAB55" populated="true" UUID="be029fdd-8f4d-4620-afa8-eec4c3ad3343" name="fishing_licenses" objectType="TABLE" physicalName="fishing_licenses" >
    <remarks></remarks>
    <folder id="FOLTAB551" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL56" populated="true" UUID="afd4390c-966b-4128-9eaf-f6d0c8f9f82d" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL56" populated="true" UUID="afd4390c-966b-4128-9eaf-f6d0c8f9f82d" autoIncrement="true" autoIncrementSequenceName="fishing_licenses_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="4" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Auto Incrementing Primary Key for fishing_licenses.</remarks>
     </column>
-    <column id="COL57" populated="true" UUID="fd817800-1fdd-41f1-acb6-cb39b015dfb3" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_person_id_seq" defaultValue="" name="person_id" nullable="0" physicalName="person_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL57" populated="true" UUID="abbe4e9b-5b8f-447f-b935-48367db31b43" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_area_inspector_id_seq" defaultValue="" name="area_inspector_id" nullable="0" physicalName="area_inspector_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for area_inspector awarding license</remarks>
     </column>
-    <column id="COL58" populated="true" UUID="abbe4e9b-5b8f-447f-b935-48367db31b43" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_area_inspector_id_seq" defaultValue="" name="area_inspector_id" nullable="0" physicalName="area_inspector_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL58" populated="true" UUID="119c55cf-8e2f-4874-8aaa-a354c15fd584" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_start_at_seq" defaultValue="" name="start_at" nullable="0" physicalName="start_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Required timestamp of commencement of fishing_license</remarks>
     </column>
-    <column id="COL59" populated="true" UUID="119c55cf-8e2f-4874-8aaa-a354c15fd584" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_start_at_seq" defaultValue="" name="start_at" nullable="0" physicalName="start_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
-     <remarks></remarks>
+    <column id="COL59" populated="true" UUID="2597f8f7-5823-419a-8c0e-ff498b59edab" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_end_at_seq" defaultValue="" name="end_at" nullable="0" physicalName="end_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Required timestamp for termination of fishing_license</remarks>
     </column>
-    <column id="COL60" populated="true" UUID="2597f8f7-5823-419a-8c0e-ff498b59edab" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_end_at_seq" defaultValue="" name="end_at" nullable="0" physicalName="end_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
-     <remarks></remarks>
+    <column id="COL60" populated="true" UUID="67ea1440-e243-49d7-8b1b-20213456ea53" autoIncrement="false" autoIncrementSequenceName="fishing_licenses_fisherman_id_seq" defaultValue="" name="fisherman_id" nullable="0" physicalName="fisherman_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign_key for person license awarded to</remarks>
     </column>
     </folder>
     <folder id="FOLTAB553" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -233,10 +224,10 @@
   <table id="TAB63" populated="true" UUID="647e80ca-c762-4b33-aea5-e6a00d0c97e5" name="quotas" objectType="TABLE" physicalName="quotas" >
    <remarks></remarks>
    <folder id="FOLTAB631" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL64" populated="true" UUID="6716b692-5e29-499b-97fb-bd9beff24652" autoIncrement="false" autoIncrementSequenceName="quotas_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL64" populated="true" UUID="6716b692-5e29-499b-97fb-bd9beff24652" autoIncrement="true" autoIncrementSequenceName="quotas_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="5" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL65" populated="true" UUID="4d042491-4646-490c-a316-794806b59443" autoIncrement="false" autoIncrementSequenceName="quotas_person_id_seq" defaultValue="" name="person_id" nullable="0" physicalName="person_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL65" populated="true" UUID="4d042491-4646-490c-a316-794806b59443" autoIncrement="false" autoIncrementSequenceName="quotas_fisherman_id_seq" defaultValue="" name="fisherman_id" nullable="0" physicalName="fisherman_id" precision="0" referenceCount="0" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL66" populated="true" UUID="3c40401a-6311-41ff-992a-b826625a24d8" autoIncrement="false" autoIncrementSequenceName="quotas_area_inspector_id_seq" defaultValue="" name="area_inspector_id" nullable="0" physicalName="area_inspector_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
@@ -245,83 +236,83 @@
     <column id="COL67" populated="true" UUID="9c24f96c-cd7f-4c59-9116-dfb02cf0b72b" autoIncrement="false" autoIncrementSequenceName="quotas_start_at_seq" defaultValue="" name="start_at" nullable="0" physicalName="start_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
+    <column id="COL68" populated="true" UUID="191b0ff7-83fe-4d50-bbad-3c93170e2b76" autoIncrement="false" autoIncrementSequenceName="quotas_species_id_seq" defaultValue="" name="species_id" nullable="0" physicalName="species_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL69" populated="true" UUID="c0a3cbbb-b619-4fa9-8b3f-f00c0ad96e4d" autoIncrement="false" autoIncrementSequenceName="quotas_catch_limit_seq" defaultValue="" name="catch_limit" nullable="0" physicalName="catch_limit" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks>Limit, in tonnes, of species allowed to be caught by fisherman in marine area.</remarks>
+    </column>
     </folder>
     <folder id="FOLTAB633" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
     <folder id="FOLTAB632" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB634" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX68" populated="true" UUID="30181428-f3c4-40aa-bbfe-10d37e4a97b4" clustered="false" name="quotas_pk" physicalName="quotas_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC69" populated="true" UUID="e85cd091-fdc6-4b78-ae08-4a5e56e1fadc" ascendingOrDescending="UNSPECIFIED" column-ref="COL64" name="id" physicalName="id" />
+    <index id="IDX70" populated="true" UUID="30181428-f3c4-40aa-bbfe-10d37e4a97b4" clustered="false" name="quotas_pk" physicalName="quotas_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC71" populated="true" UUID="e85cd091-fdc6-4b78-ae08-4a5e56e1fadc" ascendingOrDescending="UNSPECIFIED" column-ref="COL64" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
-  <table id="TAB70" populated="true" UUID="0990f623-b293-4f4d-ba39-611cbd5ea410" name="species_quotas" objectType="TABLE" physicalName="species_quotas" >
+  <table id="TAB72" populated="true" UUID="5dd3d4fc-e6aa-49a7-aeed-ff08c9a2874b" name="catch_limits" objectType="TABLE" physicalName="catch_limits" >
    <remarks></remarks>
-   <folder id="FOLTAB701" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL71" populated="true" UUID="61ba64a8-6f1d-4607-9ee9-af038e37173d" autoIncrement="false" autoIncrementSequenceName="species_quotas_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+   <folder id="FOLTAB721" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL73" populated="true" UUID="742e4b3d-69e8-44cd-87fa-fd393d33b9c9" autoIncrement="false" autoIncrementSequenceName="catch_limits_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Auto Incrementing Primary Key for catch_limits</remarks>
     </column>
-    <column id="COL72" populated="true" UUID="e62eb26e-bdec-40ff-8af8-7d2b6d18daf7" autoIncrement="false" autoIncrementSequenceName="species_quotas_quota_id_seq" defaultValue="" name="quota_id" nullable="0" physicalName="quota_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL74" populated="true" UUID="cf6fd463-35ac-48b6-af63-2fc9fed679c6" autoIncrement="false" autoIncrementSequenceName="catch_limits_marine_area_id_seq" defaultValue="" name="marine_area_id" nullable="0" physicalName="marine_area_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for marine_area</remarks>
     </column>
-    <column id="COL73" populated="true" UUID="4a6baad6-765e-45b2-83a3-cfc6386c9871" autoIncrement="false" autoIncrementSequenceName="species_quotas_species_id_seq" defaultValue="" name="species_id" nullable="0" physicalName="species_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL75" populated="true" UUID="1f2eec2a-d393-43bd-9de8-30322c7c6182" autoIncrement="false" autoIncrementSequenceName="catch_limits_species_id_seq" defaultValue="" name="species_id" nullable="0" physicalName="species_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for species.</remarks>
     </column>
-    <column id="COL74" populated="true" UUID="1fdf3dd7-3dbe-42a5-b663-59d81472afc7" autoIncrement="false" autoIncrementSequenceName="species_quotas_catch_limit_seq" defaultValue="" name="catch_limit" nullable="0" physicalName="catch_limit" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL76" populated="true" UUID="57a46d06-3b13-43ef-b9a2-5d55c58987b5" autoIncrement="false" autoIncrementSequenceName="catch_limits_minimum_viable_population_seq" defaultValue="" name="minimum_viable_population" nullable="0" physicalName="minimum_viable_population" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>The minimum viable population of a species in a marine area</remarks>
+    </column>
+    <column id="COL77" populated="true" UUID="2e4d2af0-0de8-4256-9c03-5509f8b39987" autoIncrement="false" autoIncrementSequenceName="catch_limits_maximum_sustainable_yield_seq" defaultValue="" name="maximum_sustainable_yield" nullable="0" physicalName="maximum_sustainable_yield" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks> The largest catch that can be taken of a species in a marine area, in tonnes, over an indefinite period</remarks>
+    </column>
+    <column id="COL78" populated="true" UUID="ba7377ae-5c12-420e-8bf3-fa03154f8a25" autoIncrement="false" autoIncrementSequenceName="catch_limits_start_at_seq" defaultValue="" name="start_at" nullable="0" physicalName="start_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Required timestamp of start_at: The beginning of the year this catch_limit is for.</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB703" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB723" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB702" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB722" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB704" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX75" populated="true" UUID="a44a23d3-3648-41c8-9720-e8e6ea5e4c6f" clustered="false" name="species_quotas_pk" physicalName="species_quotas_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC76" populated="true" UUID="a20da5eb-b9c9-4977-9b4d-4e0d3345a406" ascendingOrDescending="UNSPECIFIED" column-ref="COL71" name="id" physicalName="id" />
+    <folder id="FOLTAB724" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX79" populated="true" UUID="2f0301cd-b9bb-4fab-b25f-52ee261c5423" clustered="false" name="catch_limits_pk" physicalName="catch_limits_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC80" populated="true" UUID="8b0deafd-f01e-44cd-b9a9-c8139e1bc513" ascendingOrDescending="UNSPECIFIED" column-ref="COL73" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
-  <table id="TAB77" populated="true" UUID="5dd3d4fc-e6aa-49a7-aeed-ff08c9a2874b" name="catch_limits" objectType="TABLE" physicalName="catch_limits" >
+  <table id="TAB81" populated="true" UUID="4746fa80-5656-476e-bc06-3c7e6a490bb4" name="scientists" objectType="TABLE" physicalName="scientists" >
    <remarks></remarks>
-   <folder id="FOLTAB771" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL78" populated="true" UUID="742e4b3d-69e8-44cd-87fa-fd393d33b9c9" autoIncrement="false" autoIncrementSequenceName="catch_limits_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="3" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+   <folder id="FOLTAB811" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL82" populated="true" UUID="bcde7213-5a91-4899-ab43-172de7cda039" autoIncrement="false" autoIncrementSequenceName="scientists_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Auto Incrementing primary key for scientists</remarks>
     </column>
-    <column id="COL79" populated="true" UUID="cf6fd463-35ac-48b6-af63-2fc9fed679c6" autoIncrement="false" autoIncrementSequenceName="catch_limits_marine_area_id_seq" defaultValue="" name="marine_area_id" nullable="0" physicalName="marine_area_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL80" populated="true" UUID="1f2eec2a-d393-43bd-9de8-30322c7c6182" autoIncrement="false" autoIncrementSequenceName="catch_limits_species_id_seq" defaultValue="" name="species_id" nullable="0" physicalName="species_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL81" populated="true" UUID="57a46d06-3b13-43ef-b9a2-5d55c58987b5" autoIncrement="false" autoIncrementSequenceName="catch_limits_minimum_population_seq" defaultValue="" name="minimum_population" nullable="0" physicalName="minimum_population" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL82" populated="true" UUID="2e4d2af0-0de8-4256-9c03-5509f8b39987" autoIncrement="false" autoIncrementSequenceName="catch_limits_total_available_catch_seq" defaultValue="" name="total_available_catch" nullable="0" physicalName="total_available_catch" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL83" populated="true" UUID="ba7377ae-5c12-420e-8bf3-fa03154f8a25" autoIncrement="false" autoIncrementSequenceName="catch_limits_start_at_seq" defaultValue="" name="start_at" nullable="0" physicalName="start_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
-     <remarks></remarks>
+    <column id="COL83" populated="true" UUID="2048af7b-f81b-4808-be96-7d73ac3bbcc4" autoIncrement="false" autoIncrementSequenceName="scientists_person_id_seq" defaultValue="" name="person_id" nullable="0" physicalName="person_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for the person who is a scientist</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB773" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB813" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB772" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB812" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB774" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX84" populated="true" UUID="2f0301cd-b9bb-4fab-b25f-52ee261c5423" clustered="false" name="catch_limits_pk" physicalName="catch_limits_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC85" populated="true" UUID="8b0deafd-f01e-44cd-b9a9-c8139e1bc513" ascendingOrDescending="UNSPECIFIED" column-ref="COL78" name="id" physicalName="id" />
+    <folder id="FOLTAB814" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX84" populated="true" UUID="36d0afb7-7900-4a3f-8c20-75faf67097ac" clustered="false" name="scientists_pk" physicalName="scientists_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC85" populated="true" UUID="f45e31a1-219e-4e47-9bc0-d1918fd352e2" ascendingOrDescending="UNSPECIFIED" column-ref="COL82" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
-  <table id="TAB86" populated="true" UUID="4746fa80-5656-476e-bc06-3c7e6a490bb4" name="scientists" objectType="TABLE" physicalName="scientists" >
+  <table id="TAB86" populated="true" UUID="dbc1f67a-3cb4-4247-8ab0-6d490e577083" name="survey_scientists" objectType="TABLE" physicalName="survey_scientists" >
    <remarks></remarks>
    <folder id="FOLTAB861" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL87" populated="true" UUID="bcde7213-5a91-4899-ab43-172de7cda039" autoIncrement="false" autoIncrementSequenceName="scientists_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL87" populated="true" UUID="1effe913-9721-4edf-9d4c-4a095bc15b0d" autoIncrement="false" autoIncrementSequenceName="survey_scientists_scientist_id_seq" defaultValue="" name="scientist_id" nullable="0" physicalName="scientist_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for a scientist</remarks>
     </column>
-    <column id="COL88" populated="true" UUID="2048af7b-f81b-4808-be96-7d73ac3bbcc4" autoIncrement="false" autoIncrementSequenceName="scientists_person_id_seq" defaultValue="" name="person_id" nullable="0" physicalName="person_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL88" populated="true" UUID="412f23fd-fd32-4643-9d65-d8e95ee2e22a" autoIncrement="false" autoIncrementSequenceName="survey_scientists_population_survey_id_seq" defaultValue="" name="population_survey_id" nullable="0" physicalName="population_survey_id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for a population_survey</remarks>
     </column>
     </folder>
     <folder id="FOLTAB863" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
@@ -329,160 +320,267 @@
     <folder id="FOLTAB862" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
     <folder id="FOLTAB864" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX89" populated="true" UUID="36d0afb7-7900-4a3f-8c20-75faf67097ac" clustered="false" name="scientists_pk" physicalName="scientists_pk" primaryKeyIndex="true" unique="false" >
-     <index-column id="IDC90" populated="true" UUID="f45e31a1-219e-4e47-9bc0-d1918fd352e2" ascendingOrDescending="UNSPECIFIED" column-ref="COL87" name="id" physicalName="id" />
+    <index id="IDX89" populated="true" UUID="2c847a27-d52f-4740-b9d1-edc8fa6625a6" clustered="false" name="survey_scientists_pk" physicalName="survey_scientists_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC90" populated="true" UUID="3f69e569-3fed-4f79-8887-df8433a0c216" ascendingOrDescending="UNSPECIFIED" column-ref="COL87" name="scientist_id" physicalName="scientist_id" />
+     <index-column id="IDC91" populated="true" UUID="cc4761e4-ffdc-4d6d-84bd-72a71cedd34a" ascendingOrDescending="UNSPECIFIED" column-ref="COL88" name="population_survey_id" physicalName="population_survey_id" />
     </index>
    </folder>
   </table>
-  <table id="TAB91" populated="true" UUID="dbc1f67a-3cb4-4247-8ab0-6d490e577083" name="survey_scientists" objectType="TABLE" physicalName="survey_scientists" >
+  <table id="TAB92" populated="true" UUID="73819dcc-d873-45a4-8cea-39adc98702e0" name="catch_limit_scientists" objectType="TABLE" physicalName="catch_limit_scientists" >
    <remarks></remarks>
-   <folder id="FOLTAB911" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL92" populated="true" UUID="1effe913-9721-4edf-9d4c-4a095bc15b0d" autoIncrement="false" autoIncrementSequenceName="survey_scientists_scientist_id_seq" defaultValue="" name="scientist_id" nullable="0" physicalName="scientist_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+   <folder id="FOLTAB921" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL93" populated="true" UUID="69643cb4-e5f8-4d94-88ff-b82f88b4e332" autoIncrement="false" autoIncrementSequenceName="catch_limit_scientists_catch_limit_id_seq" defaultValue="" name="catch_limit_id" nullable="0" physicalName="catch_limit_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for catch_limit worked on by specified scientist</remarks>
     </column>
-    <column id="COL93" populated="true" UUID="412f23fd-fd32-4643-9d65-d8e95ee2e22a" autoIncrement="false" autoIncrementSequenceName="survey_scientists_population_survey_id_seq" defaultValue="" name="population_survey_id" nullable="0" physicalName="population_survey_id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL94" populated="true" UUID="d5a8a259-51ae-4ce9-970f-b675d1f799cf" autoIncrement="false" autoIncrementSequenceName="population_surveys_id_seq_1" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
+    <column id="COL94" populated="true" UUID="af789779-8da2-4697-8bec-69d54bc78072" autoIncrement="false" autoIncrementSequenceName="catch_limit_scientists_scientist_id_seq" defaultValue="" name="scientist_id" nullable="0" physicalName="scientist_id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for scientist who worked on specified catch_limit</remarks>
     </column>
     </folder>
-    <folder id="FOLTAB913" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB923" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB912" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB922" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB914" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX95" populated="true" UUID="2c847a27-d52f-4740-b9d1-edc8fa6625a6" clustered="false" name="survey_scientists_pk" physicalName="survey_scientists_pk" primaryKeyIndex="true" unique="true" >
-     <index-column id="IDC96" populated="true" UUID="3f69e569-3fed-4f79-8887-df8433a0c216" ascendingOrDescending="UNSPECIFIED" column-ref="COL92" name="scientist_id" physicalName="scientist_id" />
-     <index-column id="IDC97" populated="true" UUID="cc4761e4-ffdc-4d6d-84bd-72a71cedd34a" ascendingOrDescending="UNSPECIFIED" column-ref="COL93" name="population_survey_id" physicalName="population_survey_id" />
+    <folder id="FOLTAB924" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX95" populated="true" UUID="3a7a1025-1c1a-41e6-a885-bbe5cd457201" clustered="false" name="catch_limit_scientists_pk" physicalName="catch_limit_scientists_pk" primaryKeyIndex="true" unique="true" >
+     <index-column id="IDC96" populated="true" UUID="49fa22ea-2d40-4ada-8351-f13ce88ccf56" ascendingOrDescending="UNSPECIFIED" column-ref="COL93" name="catch_limit_id" physicalName="catch_limit_id" />
+     <index-column id="IDC97" populated="true" UUID="377e3c3c-0a99-4a8f-86aa-46b109dc5ad3" ascendingOrDescending="UNSPECIFIED" column-ref="COL94" name="scientist_id" physicalName="scientist_id" />
+    </index>
+    <index id="IDX98" populated="true" UUID="c0cdeda3-025a-4772-91a5-dd00932b65dc" clustered="false" name="catch_limit_scientists_idx" physicalName="catch_limit_scientists_idx" primaryKeyIndex="false" unique="true" >
+     <index-column id="IDC99" populated="true" UUID="3444bedd-dee8-4933-8acf-eb746a096bbc" ascendingOrDescending="UNSPECIFIED" column-ref="COL93" name="catch_limit_id" physicalName="catch_limit_id" />
+     <index-column id="IDC100" populated="true" UUID="529f7d9a-2e91-491c-813b-62436a9381d8" ascendingOrDescending="UNSPECIFIED" column-ref="COL94" name="scientist_id" physicalName="scientist_id" />
     </index>
    </folder>
   </table>
-  <table id="TAB98" populated="true" UUID="73819dcc-d873-45a4-8cea-39adc98702e0" name="catch_limit_scientists" objectType="TABLE" physicalName="catch_limit_scientists" >
+  <table id="TAB101" populated="true" UUID="a01d4a2d-7ac4-4123-b892-39be976708e8" name="fishermen" objectType="TABLE" physicalName="fishermen" >
    <remarks></remarks>
-   <folder id="FOLTAB981" populated="true" name="Columns" physicalName="Columns" type="1">
-    <column id="COL99" populated="true" UUID="69643cb4-e5f8-4d94-88ff-b82f88b4e332" autoIncrement="false" autoIncrementSequenceName="catch_limit_scientists_catch_limit_id_seq" defaultValue="" name="catch_limit_id" nullable="0" physicalName="catch_limit_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+   <folder id="FOLTAB1011" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL102" populated="true" UUID="77a3ad5a-42a2-4129-86b7-c3082d04f131" autoIncrement="false" autoIncrementSequenceName="fishermen_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL100" populated="true" UUID="af789779-8da2-4697-8bec-69d54bc78072" autoIncrement="false" autoIncrementSequenceName="catch_limit_scientists_scientist_id_seq" defaultValue="" name="scientist_id" nullable="0" physicalName="scientist_id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
-     <remarks></remarks>
-    </column>
-    <column id="COL101" populated="true" UUID="823f6d2a-bc91-4bff-a829-f1f255218b96" autoIncrement="false" autoIncrementSequenceName="catch_limit_scientists_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL103" populated="true" UUID="de694ad5-d6aa-4b53-9689-7c28cc2d30b6" autoIncrement="false" autoIncrementSequenceName="fishermen_person_id_seq" defaultValue="" name="person_id" nullable="0" physicalName="person_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
-    <folder id="FOLTAB983" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    <folder id="FOLTAB1013" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
     </folder>
-    <folder id="FOLTAB982" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    <folder id="FOLTAB1012" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
     </folder>
-    <folder id="FOLTAB984" populated="true" name="Indices" physicalName="Indices" type="4">
-    <index id="IDX102" populated="true" UUID="3a7a1025-1c1a-41e6-a885-bbe5cd457201" clustered="false" name="catch_limit_scientists_pk" physicalName="catch_limit_scientists_pk" primaryKeyIndex="true" unique="true" >
-     <index-column id="IDC103" populated="true" UUID="49fa22ea-2d40-4ada-8351-f13ce88ccf56" ascendingOrDescending="UNSPECIFIED" column-ref="COL99" name="catch_limit_id" physicalName="catch_limit_id" />
-     <index-column id="IDC104" populated="true" UUID="377e3c3c-0a99-4a8f-86aa-46b109dc5ad3" ascendingOrDescending="UNSPECIFIED" column-ref="COL100" name="scientist_id" physicalName="scientist_id" />
+    <folder id="FOLTAB1014" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX104" populated="true" UUID="28b97078-8199-4a3a-9eda-498e6d6c5805" clustered="false" name="fishermen_pk" physicalName="fishermen_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC105" populated="true" UUID="c55af9ff-8c1e-4de8-b9ae-1a6da14ce66f" ascendingOrDescending="UNSPECIFIED" column-ref="COL102" name="id" physicalName="id" />
     </index>
-    <index id="IDX105" populated="true" UUID="c0cdeda3-025a-4772-91a5-dd00932b65dc" clustered="false" name="catch_limit_scientists_idx" physicalName="catch_limit_scientists_idx" primaryKeyIndex="false" unique="true" >
-     <index-column id="IDC106" populated="true" UUID="3444bedd-dee8-4933-8acf-eb746a096bbc" ascendingOrDescending="UNSPECIFIED" column-ref="COL99" name="catch_limit_id" physicalName="catch_limit_id" />
-     <index-column id="IDC107" populated="true" UUID="529f7d9a-2e91-491c-813b-62436a9381d8" ascendingOrDescending="UNSPECIFIED" column-ref="COL100" name="scientist_id" physicalName="scientist_id" />
+   </folder>
+  </table>
+  <table id="TAB106" populated="true" UUID="d1150f6d-8f19-4a39-8fef-1c3f1c8791b2" name="fishing_expeditions" objectType="TABLE" physicalName="fishing_expeditions" >
+   <remarks></remarks>
+   <folder id="FOLTAB1061" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL107" populated="true" UUID="b0f62f7d-bf3b-42a8-af5f-9c42ca6f8691" autoIncrement="false" autoIncrementSequenceName="fishing_expeditions_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL108" populated="true" UUID="8b640fd5-ba86-4d87-813a-358c93cde97a" autoIncrement="false" autoIncrementSequenceName="fishing_expeditions_end_at_seq" defaultValue="" name="end_at" nullable="0" physicalName="end_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Required time the expedition ended</remarks>
+    </column>
+    <column id="COL109" populated="true" UUID="4d1e97ed-7ee3-4596-911e-c660f8c72e7f" autoIncrement="false" autoIncrementSequenceName="fishing_expeditions_start_at_seq" defaultValue="" name="start_at" nullable="0" physicalName="start_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Required time the expedition began</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1063" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1062" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1064" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX110" populated="true" UUID="526b86f1-e17c-47dc-8f5b-a1ddf08c6b8d" clustered="false" name="fishing_expeditions_pk" physicalName="fishing_expeditions_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC111" populated="true" UUID="ad6f9887-37ab-4593-96a2-2ed77efa6b21" ascendingOrDescending="UNSPECIFIED" column-ref="COL107" name="id" physicalName="id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB112" populated="true" UUID="2f05b905-b593-4feb-84a5-e921ca83c844" name="fishermen_fishing_expeditions" objectType="TABLE" physicalName="fishermen_fishing_expeditions" >
+   <remarks></remarks>
+   <folder id="FOLTAB1121" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL113" populated="true" UUID="ea4718da-7a9e-4b89-a6ef-1c626b5bf50d" autoIncrement="false" autoIncrementSequenceName="fishermen_fishing_expeditions_fisherman_id_seq" defaultValue="" name="fisherman_id" nullable="0" physicalName="fisherman_id" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for fisherman</remarks>
+    </column>
+    <column id="COL114" populated="true" UUID="5cac070f-fa78-4406-b83b-fa9d886f04fa" autoIncrement="false" autoIncrementSequenceName="fishermen_fishing_expeditions_fishing_expedition_id_seq" defaultValue="" name="fishing_expedition_id" nullable="0" physicalName="fishing_expedition_id" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for fishing_expedition</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1123" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1122" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1124" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX115" populated="true" UUID="3da8cd0a-4e15-4e73-a12d-6c5f58995baa" clustered="false" name="fishermen_fishing_expeditions_pk" physicalName="fishermen_fishing_expeditions_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC116" populated="true" UUID="ff25fa11-3962-4777-9da5-ca0f0edc9f19" ascendingOrDescending="UNSPECIFIED" column-ref="COL113" name="fisherman_id" physicalName="fisherman_id" />
+     <index-column id="IDC117" populated="true" UUID="9b747283-bc5a-499a-ae14-8d48bc5433c6" ascendingOrDescending="UNSPECIFIED" column-ref="COL114" name="fishing_expedition_id" physicalName="fishing_expedition_id" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB118" populated="true" UUID="d573a723-7684-4313-8f7c-8bb1210f7be3" name="catch_reports" objectType="TABLE" physicalName="catch_reports" >
+   <remarks></remarks>
+   <folder id="FOLTAB1181" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL119" populated="true" UUID="48b53b37-fa1e-4a2d-b661-6ffcbc0823bf" autoIncrement="true" autoIncrementSequenceName="catch_reports_id_seq" defaultValue="" name="id" nullable="0" physicalName="id" precision="0" primaryKeySeq="0" referenceCount="4" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required Auto Incrementing Primary Key for catch_reports</remarks>
+    </column>
+    <column id="COL120" populated="true" UUID="1d9b1213-8ded-439a-be6d-5ab37719bcd6" autoIncrement="false" autoIncrementSequenceName="catch_reports_catch_amount_seq" defaultValue="" name="catch_amount" nullable="0" physicalName="catch_amount" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="6" userDefinedTypeUUID="7e55bcd0-7606-4153-b749-9c397f12c4d8" >
+     <remarks>Required amount, in tonnes, of species caught in marine area on fishing expedition</remarks>
+    </column>
+    <column id="COL121" populated="true" UUID="9a0b8d2f-5fae-4a06-b465-14fcfb856a56" autoIncrement="false" autoIncrementSequenceName="catch_reports_fishing_expedition_id_seq" defaultValue="" name="fishing_expedition_id" nullable="0" physicalName="fishing_expedition_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for fishing_expedition</remarks>
+    </column>
+    <column id="COL122" populated="true" UUID="aae2ff7c-129c-4c94-97a8-9fc9a2c3164f" autoIncrement="false" autoIncrementSequenceName="catch_reports_logged_at_seq" defaultValue="" name="logged_at" nullable="0" physicalName="logged_at" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
+     <remarks>Required time the catch report was logged</remarks>
+    </column>
+    <column id="COL123" populated="true" UUID="3966790b-3109-4799-8588-85e5e83c200f" autoIncrement="false" autoIncrementSequenceName="catch_reports_marine_area_id_seq" defaultValue="" name="marine_area_id" nullable="0" physicalName="marine_area_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for marine_area</remarks>
+    </column>
+    <column id="COL124" populated="true" UUID="05c5a49b-76d0-4344-9a32-175ae7230897" autoIncrement="false" autoIncrementSequenceName="catch_reports_species_id_seq" defaultValue="" name="species_id" nullable="0" physicalName="species_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks>Required foreign key for species</remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB1183" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB1182" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB1184" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX125" populated="true" UUID="26285a94-1ad1-4887-827e-76e82a3f1793" clustered="false" name="catch_reports_pk" physicalName="catch_reports_pk" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC126" populated="true" UUID="204788f8-b0c2-4fd4-aec5-161141614c4b" ascendingOrDescending="UNSPECIFIED" column-ref="COL119" name="id" physicalName="id" />
     </index>
    </folder>
   </table>
   <relationships>
-   <relationship id="REL108" populated="true" UUID="b93758b7-60a8-4e2f-a476-04f0b737c23a" deferrability="7" deleteRule="3" fk-table-ref="TAB39" fkCardinality="7" identifying="true" name="people_area_inspectors_fk" physicalName="people_area_inspectors_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP109" populated="true" UUID="0825bda6-a17b-4ab5-806f-67297c812006" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL127" populated="true" UUID="b93758b7-60a8-4e2f-a476-04f0b737c23a" deferrability="7" deleteRule="3" fk-table-ref="TAB39" fkCardinality="7" identifying="true" name="people_area_inspectors_fk" physicalName="people_area_inspectors_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP128" populated="true" UUID="6cbedcdf-b77e-4b9b-a900-52726d22f44e" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL110" populated="true" UUID="33ef2a5b-9ddf-41e9-b69a-ce02cce49552" deferrability="7" deleteRule="3" fk-table-ref="TAB55" fkCardinality="7" identifying="true" name="people_fishing_licenses_fk" physicalName="people_fishing_licenses_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP111" populated="true" UUID="48f202c2-2123-42c1-97a6-206489304b8e" fk-column-ref="COL56" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL129" populated="true" UUID="d40b8aed-d183-4db4-8d3f-f98cfabbc4ce" deferrability="7" deleteRule="3" fk-table-ref="TAB63" fkCardinality="7" identifying="true" name="people_quotas_fk" physicalName="people_quotas_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP130" populated="true" UUID="a60e88e1-3931-4908-bbeb-351cce59f59f" fk-column-ref="COL65" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL112" populated="true" UUID="d40b8aed-d183-4db4-8d3f-f98cfabbc4ce" deferrability="7" deleteRule="3" fk-table-ref="TAB63" fkCardinality="7" identifying="true" name="people_quotas_fk" physicalName="people_quotas_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP113" populated="true" UUID="d86408e5-1b6f-481d-8d37-267f728b5bfb" fk-column-ref="COL64" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL131" populated="true" UUID="93364c38-531f-40d2-b388-f86a36b59c62" deferrability="7" deleteRule="3" fk-table-ref="TAB81" fkCardinality="7" identifying="true" name="people_scientists_fk" physicalName="people_scientists_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP132" populated="true" UUID="7dfa72eb-5595-434f-bb3b-b490f35f63d6" fk-column-ref="COL83" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL114" populated="true" UUID="93364c38-531f-40d2-b388-f86a36b59c62" deferrability="7" deleteRule="3" fk-table-ref="TAB86" fkCardinality="7" identifying="true" name="people_scientists_fk" physicalName="people_scientists_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP115" populated="true" UUID="44432c2d-8497-4e40-ba05-a88d3c99ac78" fk-column-ref="COL87" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
+   <relationship id="REL133" populated="true" UUID="23e0b7fd-f087-41b4-a430-a3dc9e812044" deferrability="7" deleteRule="3" fk-table-ref="TAB101" fkCardinality="7" identifying="true" name="people_fishermen_fk" physicalName="people_fishermen_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP134" populated="true" UUID="3a2fe648-1965-4de4-9f62-0412db0b5713" fk-column-ref="COL102" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL116" populated="true" UUID="516e71f0-78bc-4f8b-bd1e-c17745cc9e46" deferrability="7" deleteRule="0" fk-table-ref="TAB15" fkCardinality="7" identifying="true" name="genera_species_fk" physicalName="genera_species_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="1" >
-    <column-mapping id="CMP117" populated="true" UUID="6573af33-d9b1-472a-a1da-35a226a2c051" fk-column-ref="COL16" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
+   <relationship id="REL135" populated="true" UUID="516e71f0-78bc-4f8b-bd1e-c17745cc9e46" deferrability="7" deleteRule="0" fk-table-ref="TAB15" fkCardinality="7" identifying="true" name="genera_species_fk" physicalName="genera_species_fk" pk-table-ref="TAB8" pkCardinality="2" updateRule="1" >
+    <column-mapping id="CMP136" populated="true" UUID="71c8926b-847e-4edb-ba00-3b38c48463dc" fk-column-ref="COL17" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL9" />
    </relationship>
-   <relationship id="REL118" populated="true" UUID="7848ce60-30b0-4e55-8f40-697859ea79b8" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="true" name="species_population_surveys_fk" physicalName="species_population_surveys_fk" pk-table-ref="TAB15" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP119" populated="true" UUID="c14775cb-5677-422e-a451-6510ca00c4f4" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+   <relationship id="REL137" populated="true" UUID="7848ce60-30b0-4e55-8f40-697859ea79b8" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="true" name="species_population_surveys_fk" physicalName="species_population_surveys_fk" pk-table-ref="TAB15" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP138" populated="true" UUID="a92a4522-314d-4ef6-9207-bc257849f758" fk-column-ref="COL51" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
    </relationship>
-   <relationship id="REL120" populated="true" UUID="5161db5c-576d-4f4a-a69c-4b186efdbaa0" deferrability="7" deleteRule="3" fk-table-ref="TAB70" fkCardinality="7" identifying="true" name="species_species_quotas_fk" physicalName="species_species_quotas_fk" pk-table-ref="TAB15" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP121" populated="true" UUID="30971499-e00a-4e0e-b346-86fdc645a07f" fk-column-ref="COL71" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+   <relationship id="REL139" populated="true" UUID="5161db5c-576d-4f4a-a69c-4b186efdbaa0" deferrability="7" deleteRule="3" fkCardinality="7" identifying="true" name="species_species_quotas_fk" physicalName="species_species_quotas_fk" pk-table-ref="TAB15" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP140" populated="true" UUID="a57a9caa-d9ec-48bb-bc73-30a969d4ff73" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
    </relationship>
-   <relationship id="REL122" populated="true" UUID="a4bb64e2-ad44-4d77-a69e-035588e055d1" deferrability="7" deleteRule="3" fk-table-ref="TAB77" fkCardinality="7" identifying="true" name="species_catch_limits_fk" physicalName="species_catch_limits_fk" pk-table-ref="TAB15" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP123" populated="true" UUID="4bfcf835-3a13-4e30-87c3-d2fc92ad2f53" fk-column-ref="COL78" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
+   <relationship id="REL141" populated="true" UUID="a4bb64e2-ad44-4d77-a69e-035588e055d1" deferrability="7" deleteRule="3" fk-table-ref="TAB72" fkCardinality="7" identifying="true" name="species_catch_limits_fk" physicalName="species_catch_limits_fk" pk-table-ref="TAB15" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP142" populated="true" UUID="ef8e986d-2c8e-41d0-bc96-38ede24f39af" fk-column-ref="COL75" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
    </relationship>
-   <relationship id="REL124" populated="true" UUID="dff0b752-9d8d-40fb-9430-748d16bb3c34" deferrability="7" deleteRule="0" fk-table-ref="TAB32" fkCardinality="7" identifying="true" name="countries_marine_areas_fk" physicalName="countries_marine_areas_fk" pk-table-ref="TAB25" pkCardinality="2" updateRule="1" >
-    <column-mapping id="CMP125" populated="true" UUID="6c0114fb-304e-41a2-98c1-51e3f501f101" fk-column-ref="COL33" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL26" />
+   <relationship id="REL143" populated="true" UUID="fc583632-5dba-473c-ba8c-6f9d5ddf738b" deferrability="7" deleteRule="3" fk-table-ref="TAB63" fkCardinality="7" identifying="true" name="species_quotas_fk" physicalName="species_quotas_fk" pk-table-ref="TAB15" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP144" populated="true" UUID="d0fb1c10-09d1-4189-81a4-af97ab819a68" fk-column-ref="COL68" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
    </relationship>
-   <relationship id="REL126" populated="true" UUID="4684695e-069d-491a-8b79-a2fb40bf8507" deferrability="7" deleteRule="3" fk-table-ref="TAB39" fkCardinality="7" identifying="true" name="marine_areas_area_inspectors_fk" physicalName="marine_areas_area_inspectors_fk" pk-table-ref="TAB32" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP127" populated="true" UUID="026495d2-3e3f-4a2c-b6ae-7039f5464f7a" fk-column-ref="COL40" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL33" />
+   <relationship id="REL145" populated="true" UUID="e2a5367d-7665-4d13-b9df-12f0f70c9ea2" deferrability="7" deleteRule="3" fk-table-ref="TAB118" fkCardinality="7" identifying="true" name="species_catch_reports_fk" physicalName="species_catch_reports_fk" pk-table-ref="TAB15" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP146" populated="true" UUID="ba661750-ad84-47ac-bca9-d98ff455a4f8" fk-column-ref="COL124" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL16" />
    </relationship>
-   <relationship id="REL128" populated="true" UUID="bc1d60c9-b0cf-405d-995a-bf9b3121e69f" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="true" name="marine_areas_population_surveys_fk" physicalName="marine_areas_population_surveys_fk" pk-table-ref="TAB32" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP129" populated="true" UUID="3ce424a7-fae1-4f1f-890d-042516c08e6e" fk-column-ref="COL48" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL33" />
+   <relationship id="REL147" populated="true" UUID="dff0b752-9d8d-40fb-9430-748d16bb3c34" deferrability="7" deleteRule="0" fk-table-ref="TAB32" fkCardinality="7" identifying="true" name="countries_marine_areas_fk" physicalName="countries_marine_areas_fk" pk-table-ref="TAB25" pkCardinality="2" updateRule="1" >
+    <column-mapping id="CMP148" populated="true" UUID="b22ac82b-1097-4f9c-8f66-df0e1f8b0447" fk-column-ref="COL34" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL26" />
    </relationship>
-   <relationship id="REL130" populated="true" UUID="931c5300-88df-42d1-b31a-14b88d8df9e5" deferrability="7" deleteRule="3" fk-table-ref="TAB77" fkCardinality="7" identifying="true" name="marine_areas_catch_limits_fk" physicalName="marine_areas_catch_limits_fk" pk-table-ref="TAB32" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP131" populated="true" UUID="2164c5c7-c94f-4662-a030-b6a22511d662" fk-column-ref="COL78" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL33" />
+   <relationship id="REL149" populated="true" UUID="4684695e-069d-491a-8b79-a2fb40bf8507" deferrability="7" deleteRule="3" fk-table-ref="TAB39" fkCardinality="7" identifying="true" name="marine_areas_area_inspectors_fk" physicalName="marine_areas_area_inspectors_fk" pk-table-ref="TAB32" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP150" populated="true" UUID="9986189e-6a8d-4669-bd33-a969814b1bcc" fk-column-ref="COL41" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL33" />
    </relationship>
-   <relationship id="REL132" populated="true" UUID="82a4b881-271e-45ab-8a54-cb0ec13dc44d" deferrability="7" deleteRule="3" fk-table-ref="TAB55" fkCardinality="7" identifying="true" name="area_inspectors_fishing_licenses_fk" physicalName="area_inspectors_fishing_licenses_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP133" populated="true" UUID="bb453ac2-19e8-4ba3-8972-6e81b8398855" fk-column-ref="COL56" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+   <relationship id="REL151" populated="true" UUID="bc1d60c9-b0cf-405d-995a-bf9b3121e69f" deferrability="7" deleteRule="3" fk-table-ref="TAB47" fkCardinality="7" identifying="true" name="marine_areas_population_surveys_fk" physicalName="marine_areas_population_surveys_fk" pk-table-ref="TAB32" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP152" populated="true" UUID="ef5f08f2-457c-4873-ad4b-f4e81ac50f4f" fk-column-ref="COL49" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL33" />
    </relationship>
-   <relationship id="REL134" populated="true" UUID="55eb7fe8-b26d-4e0b-af2f-53bf93ac3e2c" deferrability="7" deleteRule="3" fk-table-ref="TAB63" fkCardinality="7" identifying="true" name="area_inspectors_quotas_fk" physicalName="area_inspectors_quotas_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP135" populated="true" UUID="86aba7fb-1e39-4799-9169-79cceb4b3b14" fk-column-ref="COL64" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
+   <relationship id="REL153" populated="true" UUID="931c5300-88df-42d1-b31a-14b88d8df9e5" deferrability="7" deleteRule="3" fk-table-ref="TAB72" fkCardinality="7" identifying="true" name="marine_areas_catch_limits_fk" physicalName="marine_areas_catch_limits_fk" pk-table-ref="TAB32" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP154" populated="true" UUID="a2f50525-486d-4d8c-b68b-7b74c8263f12" fk-column-ref="COL74" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL33" />
    </relationship>
-   <relationship id="REL136" populated="true" UUID="287637a0-874b-4e31-ae82-f20e09cbca3a" deferrability="7" deleteRule="3" fk-table-ref="TAB91" fkCardinality="7" identifying="true" name="population_surveys_survey_scientists_fk" physicalName="population_surveys_survey_scientists_fk" pk-table-ref="TAB47" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP137" populated="true" UUID="deb859bc-477e-4a63-84e9-8d5f1daa1cfb" fk-column-ref="COL94" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL48" />
+   <relationship id="REL155" populated="true" UUID="04fd091b-e90f-4cc3-b8e8-ccb6f1549f81" deferrability="7" deleteRule="3" fk-table-ref="TAB118" fkCardinality="7" identifying="true" name="marine_areas_catch_reports_fk" physicalName="marine_areas_catch_reports_fk" pk-table-ref="TAB32" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP156" populated="true" UUID="3a904e7b-0c56-4888-8c0f-606f8ce2983a" fk-column-ref="COL123" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL33" />
    </relationship>
-   <relationship id="REL138" populated="true" UUID="f1e44ae5-22f2-4584-851b-19db533180c7" deferrability="7" deleteRule="3" fk-table-ref="TAB70" fkCardinality="7" identifying="true" name="quotas_species_quotas_fk" physicalName="quotas_species_quotas_fk" pk-table-ref="TAB63" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP139" populated="true" UUID="a09e4667-e38f-42c4-b8aa-df5353a5d12a" fk-column-ref="COL71" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL64" />
+   <relationship id="REL157" populated="true" UUID="82a4b881-271e-45ab-8a54-cb0ec13dc44d" deferrability="7" deleteRule="3" fk-table-ref="TAB55" fkCardinality="7" identifying="true" name="area_inspectors_fishing_licenses_fk" physicalName="area_inspectors_fishing_licenses_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP158" populated="true" UUID="bb453ac2-19e8-4ba3-8972-6e81b8398855" fk-column-ref="COL56" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
    </relationship>
-   <relationship id="REL140" populated="true" UUID="114da63e-88de-40ef-9995-30758d217584" deferrability="7" deleteRule="3" fk-table-ref="TAB98" fkCardinality="7" identifying="true" name="catch_limits_catch_limit_scientists_fk" physicalName="catch_limits_catch_limit_scientists_fk" pk-table-ref="TAB77" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP141" populated="true" UUID="d5002e98-43f1-47c0-8d4e-473da10bd3d6" fk-column-ref="COL101" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL78" />
+   <relationship id="REL159" populated="true" UUID="55eb7fe8-b26d-4e0b-af2f-53bf93ac3e2c" deferrability="7" deleteRule="3" fk-table-ref="TAB63" fkCardinality="7" identifying="true" name="area_inspectors_quotas_fk" physicalName="area_inspectors_quotas_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP160" populated="true" UUID="cbf47f21-b42d-401d-972f-93983b37abd5" fk-column-ref="COL66" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
    </relationship>
-   <relationship id="REL142" populated="true" UUID="bb78bc34-df4d-4e25-a1fd-b0fceab12e9f" deferrability="7" deleteRule="3" fk-table-ref="TAB91" fkCardinality="7" identifying="true" name="scientists_survey_scientists_fk" physicalName="scientists_survey_scientists_fk" pk-table-ref="TAB86" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP143" populated="true" UUID="8e9c1746-7452-4215-9dbf-91119c720256" fk-column-ref="COL94" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL87" />
+   <relationship id="REL161" populated="true" UUID="287637a0-874b-4e31-ae82-f20e09cbca3a" deferrability="7" deleteRule="3" fk-table-ref="TAB86" fkCardinality="7" identifying="true" name="population_surveys_survey_scientists_fk" physicalName="population_surveys_survey_scientists_fk" pk-table-ref="TAB47" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP162" populated="true" UUID="39042a3a-a9ff-4f34-9ebb-7c23bfe0b8a0" fk-column-ref="COL88" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL48" />
    </relationship>
-   <relationship id="REL144" populated="true" UUID="6232fc3d-4cfa-4fdb-a636-c5a6fe4e7108" deferrability="7" deleteRule="3" fk-table-ref="TAB98" fkCardinality="7" identifying="true" name="scientists_catch_limit_scientists_fk" physicalName="scientists_catch_limit_scientists_fk" pk-table-ref="TAB86" pkCardinality="2" updateRule="3" >
-    <column-mapping id="CMP145" populated="true" UUID="eb7999d6-187c-49fa-8519-534a1102774a" fk-column-ref="COL101" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL87" />
+   <relationship id="REL163" populated="true" UUID="f1e44ae5-22f2-4584-851b-19db533180c7" deferrability="7" deleteRule="3" fkCardinality="7" identifying="true" name="quotas_species_quotas_fk" physicalName="quotas_species_quotas_fk" pk-table-ref="TAB63" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP164" populated="true" UUID="c507659a-ff0b-4122-8953-8448b5d78ffe" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL64" />
+   </relationship>
+   <relationship id="REL165" populated="true" UUID="114da63e-88de-40ef-9995-30758d217584" deferrability="7" deleteRule="3" fk-table-ref="TAB92" fkCardinality="7" identifying="true" name="catch_limits_catch_limit_scientists_fk" physicalName="catch_limits_catch_limit_scientists_fk" pk-table-ref="TAB72" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP166" populated="true" UUID="69a831ab-ddb9-4e13-af69-81b232c453ee" fk-column-ref="COL93" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL73" />
+   </relationship>
+   <relationship id="REL167" populated="true" UUID="bb78bc34-df4d-4e25-a1fd-b0fceab12e9f" deferrability="7" deleteRule="3" fk-table-ref="TAB86" fkCardinality="7" identifying="true" name="scientists_survey_scientists_fk" physicalName="scientists_survey_scientists_fk" pk-table-ref="TAB81" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP168" populated="true" UUID="0221f54f-ea4d-4807-b0d6-562b2841598a" fk-column-ref="COL87" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL82" />
+   </relationship>
+   <relationship id="REL169" populated="true" UUID="6232fc3d-4cfa-4fdb-a636-c5a6fe4e7108" deferrability="7" deleteRule="3" fk-table-ref="TAB92" fkCardinality="7" identifying="true" name="scientists_catch_limit_scientists_fk" physicalName="scientists_catch_limit_scientists_fk" pk-table-ref="TAB81" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP170" populated="true" UUID="ec4cbb2c-c83c-4f13-846b-17418429c0fe" fk-column-ref="COL94" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL82" />
+   </relationship>
+   <relationship id="REL171" populated="true" UUID="f7829563-fc8e-4e55-9fe3-f807f9d09c67" deferrability="7" deleteRule="3" fk-table-ref="TAB63" fkCardinality="7" identifying="true" name="fishermen_quotas_fk" physicalName="fishermen_quotas_fk" pk-table-ref="TAB101" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP172" populated="true" UUID="e3eac600-c7a8-42bd-bd8d-9eeda21cd3e1" fk-column-ref="COL65" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL102" />
+   </relationship>
+   <relationship id="REL173" populated="true" UUID="639ba77d-8e37-4b21-bf08-ed3b2268c440" deferrability="7" deleteRule="3" fk-table-ref="TAB55" fkCardinality="7" identifying="true" name="fishermen_fishing_licenses_fk" physicalName="fishermen_fishing_licenses_fk" pk-table-ref="TAB101" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP174" populated="true" UUID="e0eebc57-9d7a-4030-8263-1d76624ab5df" fk-column-ref="COL60" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL102" />
+   </relationship>
+   <relationship id="REL175" populated="true" UUID="38f5ef03-81a0-43c2-bf35-cd76a49adb81" deferrability="7" deleteRule="3" fk-table-ref="TAB112" fkCardinality="7" identifying="true" name="fishermen_fishermen_fishing_expeditions_fk" physicalName="fishermen_fishermen_fishing_expeditions_fk" pk-table-ref="TAB101" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP176" populated="true" UUID="56632df9-518c-4e9f-a9a3-3dabfb070d7e" fk-column-ref="COL113" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL102" />
+   </relationship>
+   <relationship id="REL177" populated="true" UUID="2d941343-f20c-4a3a-8bf0-6bbbc76ffa49" deferrability="7" deleteRule="3" fk-table-ref="TAB112" fkCardinality="7" identifying="true" name="fishing_expeditions_fishermen_fishing_expeditions_fk" physicalName="fishing_expeditions_fishermen_fishing_expeditions_fk" pk-table-ref="TAB106" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP178" populated="true" UUID="2021c63d-979d-418d-86d6-7bbe8f6aa41a" fk-column-ref="COL114" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL107" />
+   </relationship>
+   <relationship id="REL179" populated="true" UUID="ea797b8b-c80f-4f60-8fed-3c64f3fdd888" deferrability="7" deleteRule="3" fk-table-ref="TAB118" fkCardinality="7" identifying="true" name="fishing_expeditions_catch_reports_fk" physicalName="fishing_expeditions_catch_reports_fk" pk-table-ref="TAB106" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP180" populated="true" UUID="d4dd19ab-5467-4620-a3f0-4692220174b7" fk-column-ref="COL121" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL107" />
    </relationship>
   </relationships>
  </target-database>
  <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <compare-dm-settings  ddlGenerator="ca.sqlpower.architect.ddl.PostgresDDLGenerator"  outputFormatAsString="SQL"  saveFlag="true" >
+  <source-stuff   datastoreTypeAsString="DATABASE"   connectName="SEAMM"   filePath=""  />
+  <target-stuff   datastoreTypeAsString="PROJECT"   filePath=""  />
+  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ </compare-dm-settings>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
- <play-pen zoom="0.8608695652173913" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
-  <table-pane table-ref="TAB1" x="117" y="712" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB8" x="1074" y="178" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB15" x="898" y="163" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB25" x="383" y="155" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB32" x="727" y="244" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB39" x="500" y="351" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB47" x="735" y="396" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB55" x="233" y="318" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB63" x="20" y="57" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB70" x="385" y="20" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB77" x="1021" y="432" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB86" x="541" y="743" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB91" x="1010" y="688" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-pane table-ref="TAB98" x="557" y="590" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
-  <table-link relationship-ref="REL116" pkConnection="0.5" fkConnection="0.5783132530120482" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL124" pkConnection="0.7878787878787878" fkConnection="0.22727272727272727" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL108" pkConnection="0.9358974358974359" fkConnection="0.05172413793103448" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL126" pkConnection="0.11188811188811189" fkConnection="0.9028571428571428" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL128" pkConnection="0.5244755244755245" fkConnection="0.3850574712643678" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL118" pkConnection="0.03816793893129771" fkConnection="0.9655172413793104" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL110" pkConnection="0.8717948717948718" fkConnection="0.10309278350515463" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL132" pkConnection="0.358974358974359" fkConnection="0.6410256410256411" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL112" pkConnection="0.3076923076923077" fkConnection="0.7474226804123711" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL134" pkConnection="0.04" fkConnection="0.9585492227979274" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
-  <table-link relationship-ref="REL138" pkConnection="0.31" fkConnection="0.68" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL120" pkConnection="0.2891566265060241" fkConnection="0.68" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="18"/>
-  <table-link relationship-ref="REL122" pkConnection="0.9694656488549618" fkConnection="0.017937219730941704" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL130" pkConnection="0.6713286713286714" fkConnection="0.21076233183856502" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL114" pkConnection="0.64" fkConnection="0.5" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL136" pkConnection="0.5" fkConnection="0.6230769230769231" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
-  <table-link relationship-ref="REL142" pkConnection="0.21212121212121213" fkConnection="0.8313253012048193" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
-  <table-link relationship-ref="REL140" pkConnection="0.8805970149253731" fkConnection="0.0" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="130"/>
-  <table-link relationship-ref="REL144" pkConnection="0.5547445255474452" fkConnection="0.28708133971291866" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
+ <play-pen zoom="0.8608695652173913" viewportX="313" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB1" x="40" y="20" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB8" x="846" y="745" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB15" x="726" y="557" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB25" x="637" y="403" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB32" x="664" y="270" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB39" x="500" y="104" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB47" x="967" y="300" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB55" x="241" y="126" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB63" x="164" y="390" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB72" x="1208" y="575" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB81" x="736" y="34" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB86" x="838" y="145" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB92" x="1209" y="24" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB101" x="40" y="243" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB106" x="38" y="746" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB112" x="24" y="578" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB118" x="272" y="759" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL135" pkConnection="0.15337423312883436" fkConnection="0.847953216374269" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL147" pkConnection="0.5828220858895705" fkConnection="0.3695652173913043" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL127" pkConnection="0.8952380952380953" fkConnection="0.08130081300813008" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL149" pkConnection="0.22826086956521738" fkConnection="1.0" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="24"/>
+  <table-link relationship-ref="REL151" pkConnection="0.7101449275362319" fkConnection="0.19047619047619047" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL137" pkConnection="0.9181286549707602" fkConnection="0.06511627906976744" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL157" pkConnection="0.5853658536585366" fkConnection="0.4065040650406504" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL159" pkConnection="0.011235955056179775" fkConnection="0.9849246231155779" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL141" pkConnection="0.5977011494252874" fkConnection="0.24113475177304963" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL153" pkConnection="0.8206521739130435" fkConnection="0.03787878787878788" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL131" pkConnection="0.45714285714285713" fkConnection="0.4927536231884058" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL161" pkConnection="0.2930232558139535" fkConnection="0.7611940298507462" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL167" pkConnection="0.7865168539325843" fkConnection="0.1417910447761194" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL165" pkConnection="0.4128787878787879" fkConnection="0.4976958525345622" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL169" pkConnection="0.42028985507246375" fkConnection="0.5652173913043478" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL133" pkConnection="0.4358974358974359" fkConnection="0.49635036496350365" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL171" pkConnection="0.948905109489051" fkConnection="0.02553191489361702" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL173" pkConnection="0.043478260869565216" fkConnection="0.975609756097561" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL175" pkConnection="0.49635036496350365" fkConnection="0.31343283582089554" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="132"/>
+  <table-link relationship-ref="REL177" pkConnection="0.4966442953020134" fkConnection="0.3283582089552239" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL179" pkConnection="0.5747126436781609" fkConnection="0.2624113475177305" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="33"/>
+  <table-link relationship-ref="REL143" pkConnection="0.3448275862068966" fkConnection="0.7801418439716312" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL155" pkConnection="0.4927536231884058" fkConnection="0.6595744680851063" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL145" pkConnection="0.4942528735632184" fkConnection="0.46099290780141844" rLineColor="0x4c4c4c" pkLabelText="" fkLabelText="" orientation="18"/>
  </play-pen>
  <critic-manager>
   <critic-grouping platformType="Generic" enabled="true">
