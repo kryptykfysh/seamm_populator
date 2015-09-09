@@ -11,3 +11,5 @@
 .ruby-vars
 .rbenv-vars
 /vendor
+*.architect~
+database.yml
