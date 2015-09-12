@@ -33,5 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec'
 
   spec.add_runtime_dependency 'activerecord', '~> 4.2', '>= 4.2.4'
+  spec.add_runtime_dependency 'activerecord-import', '~> 0.10', '>= 0.10.0'
   spec.add_runtime_dependency 'pg', '~> 0.18', '>= 0.18.3'
 end
