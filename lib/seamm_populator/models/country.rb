@@ -10,6 +10,8 @@ module SeammPopulator
       __FILE__
     )
 
+    has_many :marine_areas
+
     def self.seed
       self.connection.execute(
         'TRUNCATE TABLE countries RESTART IDENTITY CASCADE;'

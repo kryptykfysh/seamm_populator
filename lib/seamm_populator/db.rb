@@ -2,6 +2,7 @@
 
 require 'active_record'
 require 'activerecord-import'
+require 'faker'
 require 'pg'
 require 'yaml'
 

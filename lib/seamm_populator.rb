@@ -12,7 +12,15 @@ Dir[
 module SeammPopulator
   SEED_SEQUENCE = [
     SeammPopulator::Country,
-    SeammPopulator::Species
+    SeammPopulator::Species,
+    SeammPopulator::Person,
+    SeammPopulator::Fisherman,
+    SeammPopulator::Scientist,
+    SeammPopulator::MarineArea,
+    SeammPopulator::AreaInspector,
+    SeammPopulator::PopulationSurvey,
+    SeammPopulator::CatchLimit,
+    SeammPopulator::FishingLicense
   ]
 
   def self.seed
