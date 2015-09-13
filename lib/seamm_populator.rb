@@ -10,5 +10,12 @@ Dir[
 ].each { |file| require file }
 
 module SeammPopulator
-  # Your code goes here...
+  SEED_SEQUENCE = [
+    SeammPopulator::Country,
+    SeammPopulator::Species
+  ]
+
+  def self.seed
+    SEED_SEQUENCE.each(&:seed)
+  end
 end

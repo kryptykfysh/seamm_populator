@@ -4,8 +4,8 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Logical" value="seamm" />
    <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="PlayPen Database" />
    <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/seamm" />
    <property key="UID" value="kryptykfysh" />
    <property key="PWD" value="entropy.0" />
@@ -78,7 +78,7 @@
      <remarks>Required foreign key for genus</remarks>
     </column>
     <column id="COL18" populated="true" UUID="63b78aee-9695-498b-b147-48d8dc270ed0" autoIncrement="false" autoIncrementSequenceName="species_caab_seq" defaultValue="" name="caab" nullable="0" physicalName="caab" precision="8" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="1" userDefinedTypeUUID="67ddc63f-5541-4dd1-9236-632d9d155e80" >
-     <remarks>Code for Australian Aquatic Biota. Required and unique</remarks>
+     <remarks>Code for Australian Aquatic Biota. Required, but found to not be unique on listing sample data.</remarks>
     </column>
     <column id="COL19" populated="true" UUID="77388bc8-acb3-4749-9858-e09259471e5f" autoIncrement="false" autoIncrementSequenceName="species_name_seq" defaultValue="" name="name" nullable="0" physicalName="name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks>Required text value for the species name</remarks>
@@ -98,7 +98,7 @@
     <index id="IDX24" populated="true" UUID="2751e4d7-bb46-4f1b-b8a7-262aab8ab5a6" clustered="false" name="species_genus_id_idx" physicalName="species_genus_id_idx" primaryKeyIndex="false" unique="false" >
      <index-column id="IDC25" populated="true" UUID="c0d1656d-bbec-442b-9909-63149b808e31" ascendingOrDescending="UNSPECIFIED" column-ref="COL17" name="genus_id" physicalName="genus_id" />
     </index>
-    <index id="IDX26" populated="true" UUID="c089127a-764f-4790-b6fe-8a39deb5da17" clustered="false" name="species_caab_idx" physicalName="species_caab_idx" primaryKeyIndex="false" unique="true" >
+    <index id="IDX26" populated="true" UUID="c089127a-764f-4790-b6fe-8a39deb5da17" clustered="false" name="species_caab_idx" physicalName="species_caab_idx" primaryKeyIndex="false" unique="false" >
      <index-column id="IDC27" populated="true" UUID="e14fa5c3-cff4-4053-87bb-c0f1d84e0b75" ascendingOrDescending="UNSPECIFIED" column-ref="COL18" name="caab" physicalName="caab" />
     </index>
    </folder>
@@ -546,10 +546,10 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <compare-dm-settings  ddlGenerator="ca.sqlpower.architect.ddl.PostgresDDLGenerator"  outputFormatAsString="SQL"  saveFlag="true" >
-  <source-stuff   datastoreTypeAsString="DATABASE"   connectName="SEAMM"   filePath=""  />
+  <source-stuff   datastoreTypeAsString="DATABASE"   connectName="seamm"   filePath=""  />
   <target-stuff   datastoreTypeAsString="PROJECT"   filePath=""  />
   <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  </compare-dm-settings>
