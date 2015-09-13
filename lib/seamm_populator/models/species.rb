@@ -14,6 +14,7 @@ module SeammPopulator
     belongs_to :genus
     has_many :population_surveys
     has_many :catch_limits
+    has_many :quotas
 
     def self.seed
       add_genera

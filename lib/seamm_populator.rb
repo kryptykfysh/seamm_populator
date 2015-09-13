@@ -20,7 +20,10 @@ module SeammPopulator
     SeammPopulator::AreaInspector,
     SeammPopulator::PopulationSurvey,
     SeammPopulator::CatchLimit,
-    SeammPopulator::FishingLicense
+    SeammPopulator::FishingLicense,
+    SeammPopulator::Quota,
+    SeammPopulator::FishingExpedition,
+    SeammPopulator::CatchReport
   ]
 
   def self.seed

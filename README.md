@@ -20,7 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
-Just use it.
+After cloning the repo, download gem dependencies with:
+
+    $ bundle install
+
+Ensure the database.yml files is set up to connect to your database and then run the following in your PRY or IRB console.
+
+NOTE: This WILL delete any data in your existing database!
+
+```ruby
+require './lib/seamm_populator'
+SeammPopulator.seed
+```
 
 ## Development
 

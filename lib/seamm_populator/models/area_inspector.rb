@@ -7,6 +7,7 @@ module SeammPopulator
     belongs_to :marine_area
     belongs_to :person
     has_many :fishing_licenses
+    has_many :quotas
 
     def self.seed
       new_records = []
